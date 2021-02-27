@@ -10,7 +10,7 @@ Before you start you **should** back-up your `mixer_paths_0.xml`, if your file i
 
 Check also that the path on your file is consistent with the path in the shell script `/system/vendor/etc/mixer_paths_0.xml`.
 
-In any case check that the scripts are compatible with your phone as they have been tested on only on (one) SM-A510F.
+In any case check that the scripts are compatible with your phone as they have been tested only on (one) SM-A510F.
 
 To run the scripts type from the repository directory:
 
