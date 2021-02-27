@@ -13,7 +13,7 @@ The shell script `convert.sh` does some corrections to the python output to aid 
 
 # Remarks
 
-I was trying to find a guide that would explain which settings to change, but I could not. I also saw that the LineageOS provided file was the same as the stock Samsung file. I decided to experiment quickly by changing all values, and that was impossible to do manually, that is why I wrote these scripts.
+I was trying to find a guide that would explain which settings to change, but I could not find any. I also saw that the LineageOS provided file was the same as the stock Samsung file. I decided to experiment quickly by changing all values, and that was impossible to do manually, that is why I wrote these scripts.
 
 Ideally the script would target particular settings, but I have not had the time not the knowledge yet to see what settings to target
 
