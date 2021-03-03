@@ -4,7 +4,7 @@ do_volume = True
 do_boost = False
 do_mic1 = True
 do_mic2 = True
-AMPL = 7
+AMPL = 5
 BOOST = 1
 
 filein = './mixer_paths_0.xml'
