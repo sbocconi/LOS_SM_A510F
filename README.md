@@ -14,11 +14,11 @@ In any case check that the scripts are compatible with your phone as they have b
 
 To run the scripts type from the repository directory:
 
-`./convert.sh`
+`./convert.sh -a <value of gain_mic1> -b <value of gain_mic2> -d <diff the files> -t <dry_run>`
 
-The python script `change_mixer.py` looks for the settings with name `MIC1 Volume` and `MIC2 Volume` and multiply the value by a defined constant. I got some results with `7`.
+The python script `change_mixer.py` looks for the settings with name `MIC1 Volume` and `MIC2 Volume` and multiply the value by the parameters you passed with -a and -b. I am currently using -a 5 -b 10 but I am not clear how these values influence the final result.
 
-The script can also increase the boost but this led to distorsion.
+The script can also increase the boost but this led to distorsion and it is not used at the moment.
 
 The shell script `convert.sh` runs the python script and does some corrections to the python output to aid diffing the files, then copies the file to the phone (which should be connected via USB with debugging on) and reboots it.
 
@@ -27,4 +27,6 @@ The shell script `convert.sh` runs the python script and does some corrections t
 I was trying to find a guide that would explain which settings to change, but I could not find any. I also saw that the LineageOS provided file was the same as the stock Samsung file. I decided to experiment quickly by changing all values, and that was impossible to do manually, that is why I wrote these scripts.
 
 Ideally the script would target particular settings, but I have not had the time nor the knowledge yet to see what settings to target.
+
+If anybody out there could provide some guidance that would be of great help.
 
