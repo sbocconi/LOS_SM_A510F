@@ -1,8 +1,8 @@
 # Introduction
 Scripts to manipulate mic settings for Samsung A5 running LineageOS
 
-After I installed LineageOS 17.1 people could not hear my voice well when using the headset with for examle Whatsapp, Signal, Telegram and Skype.
-I have seen the this is a common problem but I could not find any practical way to solve it, so I have written some script that automatically change the volume and possibly boost settings on my phone.
+After I installed LineageOS 17.1 people could not hear my voice well when using the headset with for example Whatsapp, Signal, Telegram and Skype.
+I have seen that this is a common problem but I could not find any practical way to solve it, so I have written some script that automatically change the volume and possibly boost settings on my phone.
 
 # Usage
 
@@ -16,7 +16,7 @@ To run the scripts type from the repository directory:
 
 `./convert.sh -a <value of gain_mic1> -b <value of gain_mic2> -d <diff the files> -t <dry_run>`
 
-The python script `change_mixer.py` looks for the settings with name `MIC1 Volume` and `MIC2 Volume` and multiply the value by the parameters you passed with -a and -b. I am currently using -a 5 -b 10 but I am not clear how these values influence the final result.
+The python script `change_mixer.py` looks for the settings with name `MIC1 Volume` and `MIC2 Volume` and multiply the value by the parameters you passed with -a and -b. I am currently using -a 10 -b 5 but I am not clear how these values influence the final result.
 
 The script can also increase the boost but this led to distorsion and it is not used at the moment.
 

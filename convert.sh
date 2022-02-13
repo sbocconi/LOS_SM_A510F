@@ -61,11 +61,13 @@ python change_mixer.py ${params}
 
 orig_file=mixer_paths_0.xml
 py_file=mixer_paths_0_python.xml
-proc_file=mixer_paths_0_proc.xml
+proc_file=mixer_paths_0_latest.xml
 
 # The following is because the output has "value"/> instead of "value" />
 # XML-wise it is equivalent but it hampers the diffing of the files
 cat ${py_file} | sed 's/"\/>$/" \/>/g' > ${proc_file}
+
+rm ${py_file}
 
 if [ "${do_diff} " == 'y ' ]
 then
