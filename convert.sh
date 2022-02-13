@@ -4,7 +4,7 @@ is_dryrun=n
 do_mic1=n
 do_mic2=n
 
-while getopts "a:b:dt" options
+while getopts "a:b:dtf" options
 do
     case "${options}" in
         a)
@@ -31,6 +31,12 @@ do
         d)
             do_diff=y
         ;;
+        f)
+            echo "Pulling file from phone"
+            adb pull /system/vendor/etc/mixer_paths_0.xml current.xml
+            exit 0
+        ;;
+
         t)
             is_dryrun=y
         ;;
