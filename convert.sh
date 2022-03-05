@@ -88,7 +88,7 @@ then
     echo "Pushing file to phone"
     adb root
     adb remount
-    adb push ./mixer_paths_0_proc.xml /system/vendor/etc/mixer_paths_0.xml
+    adb push ${proc_file} /system/vendor/etc/${orig_file}
     adb reboot
 else
     echo "Not pushing file to phone"
