@@ -69,6 +69,11 @@ orig_file=mixer_paths_0.xml
 py_file=mixer_paths_0_python.xml
 proc_file=mixer_paths_0_latest.xml
 
+if [ ! -s ${py_file} ]
+then
+    echo "${py_file} does not exist or it is empty!"
+    exit 1
+fi
 # The following is because the output has "value"/> instead of "value" />
 # XML-wise it is equivalent but it hampers the diffing of the files
 cat ${py_file} | sed 's/"\/>$/" \/>/g' > ${proc_file}
