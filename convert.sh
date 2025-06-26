@@ -4,6 +4,12 @@ is_dryrun=n
 do_mic1=n
 do_mic2=n
 
+if ! which python >/dev/null
+then
+    echo "Activate conda env!!"
+    exit 1
+fi
+
 while getopts "a:b:dtf" options
 do
     case "${options}" in
